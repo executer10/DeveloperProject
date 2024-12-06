@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="resources/CSS/header.css">
-    <link rel="stylesheet" href="resources/CSS/join.css">
+    <link rel="stylesheet" href="/resources/CSS/member/header.css">
+    <link rel="stylesheet" href="/resources/CSS/member/join.css">
 </head>
 
 <body>
@@ -72,7 +72,7 @@
         </table>
     </form>
 
-    <script src="resources/JS/header.js"></script>
-    <script src="resources/JS/join.js"></script>
+    <script src="/resources/JS/member/header.js"></script>
+    <script src="/resources/JS/member/join.js"></script>
 </body>
 </html>

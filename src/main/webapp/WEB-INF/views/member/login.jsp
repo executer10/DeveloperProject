@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="resources/CSS/header.css">
-    <link rel="stylesheet" href="resources/CSS/login.css">
+    <link rel="stylesheet" href="resources/CSS/member/header.css">
+    <link rel="stylesheet" href="resources/CSS/member/login.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
         </table>
     </form>
 
-    <script src="resources/JS/header.js"></script>
-    <script src="resources/JS/login.js"></script>
+    <script src="resources/member/JS/header.js"></script>
+    <script src="resources/member/JS/login.js"></script>
 </body>
 </html>

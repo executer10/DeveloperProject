@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <header>
-    <a href="/index"><img src="../img/Logo.png" alt=""></a>
+    <a href="/index"><img src="/resources/img/member/Logo.png" alt=""></a>
     <div>
         <c:choose>
             <c:when test="${sessionScope.id == null}">

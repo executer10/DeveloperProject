@@ -12,6 +12,8 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/member/header.jsp" %>
+	
     <form onsubmit="return formCheck()">
         <table border="1">
             <tr>
@@ -72,7 +74,6 @@
         </table>
     </form>
 
-    <script src="/resources/JS/member/header.js"></script>
     <script src="/resources/JS/member/join.js"></script>
 </body>
 </html>

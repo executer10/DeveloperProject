@@ -123,7 +123,7 @@
         </table>
         <table>
             <tr>
-                <td>위와 같이 납부하였음을 증명합니다.<br><span>출력날짜</span><br><div style="position: relative;"><span id="Seal">한국지역난방공사</span> <img id="Seall" src="도장이미지.png" alt="도장" width="50" height="50"></div>
+                <td>위와 같이 납부하였음을 증명합니다.<br><span>출력날짜</span><br><div style="position: relative;"><span id="Seal">한국지역난방공사</span> <img id="Seall" src="/resources/img/detail/Seall.png" alt="도장" width="50" height="50"></div>
                 </td>
             </tr>
         </table>

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>증명서 처리 현황</title>
+    <link rel="stylesheet" href="/resources/CSS/mypage/mypage.css" />
 </head>
 <body>
     <div class="container">

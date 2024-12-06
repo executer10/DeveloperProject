@@ -6,7 +6,7 @@ header{
     height: 100px;
     border: 1px black solid;
     text-align: center;
-    background-image: url("../img/LogoBackground.png");
+    background-image: url("/resources/img/member/LogoBackground.png");
     background-size: 100%;
     position: fixed;
     top: 0;

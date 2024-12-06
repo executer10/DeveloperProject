@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <header>
-    <a href="/index"><img src="/resources/img/member/Logo.png" alt=""></a>
+    <a href="/main"><img src="/resources/img/member/Logo.png"></a>
     <div>
         <c:choose>
             <c:when test="${sessionScope.id == null}">

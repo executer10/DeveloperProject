@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>증명서 처리 현황</title>
-    <style>
+@charset "UTF-8";
+
+ <style>
         * {
             margin: 0;
             padding: 0;
@@ -130,65 +126,3 @@
             margin: 0 10px;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>증명서 처리 현황</h1>
-        <div class="search-area">
-            <select>
-                <option>신청인</option>
-                <option>증명서종류</option>
-            </select>
-            <input type="text" placeholder="검색어 입력">
-            <button class="search-btn">검색</button>
-        </div>
-        <div class="search-area">
-            <div class="date-range">
-                <input type="date" id="start-date" name="start-date">
-                <span>~</span>
-                <input type="date" id="end-date" name="end-date">
-            </div>
-        </div>
-
-        <table class="board-table">
-            <thead>
-                <tr>
-                    <th>회사명</th>
-                    <th>신청인</th>
-                    <th>발급일</th>
-                    <th>발급방법</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 더미 데이터 -->
-                <tr>
-                    <td>회사A</td>
-                    <td>신청인1</td>
-                    <td>2024-01-10</td>
-                    <td>온라인/팩스 출력</td>
-                </tr>
-                <tr>
-                    <td>회사B</td>
-                    <td>신청인2</td>
-                    <td>2024-01-11</td>
-                    <td>방문출력</td>
-                </tr>
-                <tr>
-                    <td>회사C</td>
-                    <td>신청인3</td>
-                    <td>2024-01-12</td>
-                    <td>온라인/팩스 출력</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="pagination">
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-        </div>
-    </div>
-</body>
-</html>

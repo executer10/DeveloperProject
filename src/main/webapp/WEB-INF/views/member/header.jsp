@@ -6,7 +6,7 @@
     <div>
         <c:choose>
             <c:when test="${sessionScope.id == null}">
-                <button type="button" onclick="location.href='/login.html'">로그인 하러가기</button>
+                <button type="button" onclick="location.href='/login'">로그인 하러가기</button>
             </c:when>
             <c:otherwise>
                 <button type="button" onclick="location.href='/logout'">로그아웃 하기</button>

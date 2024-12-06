@@ -1,128 +1,115 @@
 @charset "UTF-8";
- 
- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f5f6fa;
-            color: #333;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 { 
+	text-align: center;
+	margin-bottom:20px;
+}
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
 
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
+.search-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-        .search-area {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-            align-items: center;
-        }
+.search-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
 
-        select, input[type="text"], input[type="date"], .search-btn {
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            margin-right: 10px;
-        }
+select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px;
+}
 
-        select {
-            min-width: 150px;
-        }
+input[type="text"] {
+    flex: 1;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
 
-        input[type="text"] {
-            flex: 1;
-        }
+.search-btn {
+    padding: 8px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        .search-btn {
-            padding: 10px 20px;
-            background-color: #2196F3;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.search-btn:hover {
+    background-color: #1976D2;
+}
 
-        .search-btn:hover {
-            background-color: #1976D2;
-        }
+.board-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
-        .board-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
+.board-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #ddd;
+}
 
-        .board-table th, .board-table td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
+.board-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
 
-        .board-table th {
-            background-color: #f8f9fa;
-            border-top: 2px solid #333;
-        }
+.board-table tr:hover {
+    background-color: #f8f9fa;
+}
 
-        .board-table tr:hover {
-            background-color: #f8f9fa;
-        }
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
 
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 30px;
-        }
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s;
+}
 
-        .pagination a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #666;
-            transition: all 0.3s;
-        }
+.pagination .active {
+    background-color: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
 
-        .pagination .active {
-            background-color: #2196F3;
-            color: white;
-            border-color: #2196F3;
-        }
-
-        .pagination a:hover:not(.active) {
-            background-color: #f5f5f5;
-        }
-
-        .date-range {
-            display: flex;
-            align-items: center;
-        }
-
-        .date-range span {
-            margin: 0 10px;
-        }
-    </style>
+.pagination a:hover:not(.active) {
+    background-color: #f5f5f5;
+}

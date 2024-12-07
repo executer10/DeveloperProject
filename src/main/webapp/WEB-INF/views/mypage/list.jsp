@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> 
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>증명서 처리 현황</title>
+    <link rel="stylesheet" type="text/css" href="resources/CSS/mypage/mypage.css">    
 </head>
 <body>
+    <%@ include file="../member/header.jsp" %>
     <div class="container">
         <h1>증명서 처리 현황</h1>
         <form method="GET" action="/board/search">
@@ -69,6 +72,7 @@
             <a href="#">5</a>
         </div>
     </div>
+    <script src="resources/JS/mypage.js"></script>
 </body>
-</html>
 
+</html>

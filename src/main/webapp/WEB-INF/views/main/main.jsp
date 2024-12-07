@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="/resources/CSS/main/main.css" />
 </head>
 <body>
    <h1>간편요금조회</h1>

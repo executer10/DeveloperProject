@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="resources/CSS/member/header.css">
-    <link rel="stylesheet" href="resources/CSS/member/login.css">
+    <link rel="stylesheet" href="/resources/CSS/member/header.css">
+    <link rel="stylesheet" href="/resources/CSS/member/login.css">
 </head>
 <body>
-
+	<%@include file="/WEB-INF/views/member/header.jsp" %>
+	
     <form action="" onsubmit="return formCheck(this)">
         <table>
             <tr>
@@ -31,7 +32,6 @@
         </table>
     </form>
 
-    <script src="resources/member/JS/header.js"></script>
     <script src="resources/member/JS/login.js"></script>
 </body>
 </html>

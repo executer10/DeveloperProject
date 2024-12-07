@@ -49,21 +49,14 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="birth" id="birth" placeholder="생년월일">
-                    <p id="birthMsg"></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <input type="tel" name="tel" id="tel" placeholder="휴대폰 번호">
                     <p id="telMsg"></p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="radio" name="gender" placeholder="성별" value="male">남자
-                    <input type="radio" name="gender" placeholder="성별" value="female">여자
-                    <p id="genderMsg"></p>
+                    <input type="text" name="address" id="address" placeholder="주소">
+                    <p id="addressMsg"></p>
                 </td>
             </tr>
             <tr>

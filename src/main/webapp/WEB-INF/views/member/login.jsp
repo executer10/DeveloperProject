@@ -12,15 +12,15 @@
 <body>
 	<%@include file="/WEB-INF/views/member/header.jsp" %>
 	
-    <form action="" onsubmit="return formCheck(this)">
+    <form action="/login/processing" method="post" onsubmit="return formCheck(this)">
         <table>
             <tr>
                 <td>아이디</td>
-                <td><input type="text" name="id" id="id"></td>
+                <td><input type="text" name="user_id" id="user_id"></td>
             </tr>
             <tr>
                 <td>비밀번호</td>
-                <td><input type="password" name="pw" id="pw"></td>
+                <td><input type="password" name="password" id="password"></td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="loginCookie">로그인 유지하기</td>

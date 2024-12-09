@@ -14,18 +14,18 @@
 <body>
 	<%@include file="/WEB-INF/views/member/header.jsp" %>
 	
-    <form onsubmit="return formCheck()">
+    <form onsubmit="return formCheck()" method="post" action="/join/register">
         <table border="1">
             <tr>
                 <td>
-                    <input type="text" name="id" id="id" placeholder="아이디">
+                    <input type="text" name="user_id" id="user_id" placeholder="아이디">
                     <button type="button" style="height: 45px;">중복 체크</button>
                     <p id="idMsg"></p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                    <input type="password" name="password" id="password" placeholder="비밀번호">
                     <p id="pwMsg"></p>
                 </td>
             </tr>
@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="tel" name="tel" id="tel" placeholder="휴대폰 번호">
+                    <input type="tel" name="phone_number" id="phone_number" placeholder="휴대폰 번호">
                     <p id="telMsg"></p>
                 </td>
             </tr>

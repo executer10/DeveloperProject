@@ -5,12 +5,12 @@
     <a href="/main"><img src="/resources/img/member/Logo.png" alt=""></a>
     <div>
         <c:choose>
-            <c:when test="${sessionScope.id == null}">
+            <c:when test="${sessionScope.user_id == null}">
                 <button type="button" onclick="location.href='/login'">로그인 하러가기</button>
             </c:when>
             <c:otherwise>
                 <button type="button" onclick="location.href='/logout'">로그아웃 하기</button>
-                <button type="button" onclick="location.href='/member/page'">마이 페이지</button>
+                <button type="button" onclick="location.href='/mypage'">마이 페이지</button>
             </c:otherwise>
         </c:choose>
     </div>

@@ -1,10 +1,10 @@
 let elements = {    //form의 각 입력 필드를 담고있음. DOM(Document Object Model) 요소들을 저장하는 객체
-    id: document.getElementById("id"),
-    pw: document.getElementById("pw"),
+    id: document.getElementById("user_id"),
+    pw: document.getElementById("password"),
     pwCheck: document.getElementById("pwCheck"),
     email: document.getElementById("email"),
     name: document.getElementById("name"),
-    tel: document.getElementById("tel"),
+    tel: document.getElementById("phone_number"),
     address: document.getElementById("address")
 }
 let patterns = {    //각 입력 필드의 유효성을 검사할 정규표현식 패턴

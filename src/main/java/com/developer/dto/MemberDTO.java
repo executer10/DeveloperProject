@@ -45,5 +45,13 @@ public class MemberDTO {
 		this.address = address;
 	}
 	
+	@Override
+	public String toString() {
+		return "MemberDTO [user_id=" + user_id + ", password=" + password + ", email=" + email + ", name=" + name
+				+ ", phone_number=" + phone_number + ", address=" + address + "]";
+	}
+	
+	
+	
 	
 }

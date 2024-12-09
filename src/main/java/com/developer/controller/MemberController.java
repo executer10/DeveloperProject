@@ -44,7 +44,7 @@ public class MemberController {
 	
 	@PostMapping("/join/register")
 	public String PostJoin(MemberDTO memberDTO, Model model) throws Exception{
-		
+		System.out.println("MemberController : " + memberDTO);
 		int result = idOverlap(memberDTO);
 		
 		// 아이디 중복 시 회원가입 페이지로 리다이렉트
@@ -60,7 +60,7 @@ public class MemberController {
 		memberService.register(memberDTO);
 		
 		// alertPrint.jsp페이지 이동 후 /login주소로 이동
-		return "member/alertPrint";
+		return "/member/alertPrint";
 	}
 	
 	@PostMapping("login/processing")
@@ -133,7 +133,7 @@ public class MemberController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "member/alertPrint";
+		return "/member/alertPrint";
 	}
 	
 	private int loginCheck(MemberDTO memberDTO) throws Exception {

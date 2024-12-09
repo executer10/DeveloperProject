@@ -4,68 +4,8 @@
 <html>
 <head>
     <meta charset="UTF-8">    
-    <title>Document</title>
-    <style>
-        /* 출력용 A4 크기 설정 */
-        @media print {
-            @page {
-                size: A4;
-                margin: 20mm; /* 출력 여백 */
-            }
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-        }
-
-        /* 전체 레이아웃 */
-        body {
-            width: 210mm;
-            margin: 0 auto;
-            font-family: Arial, sans-serif;
-            line-height: 1.4;
-        }
-
-        h2, h3 {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        table {
-            width: 95%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #000;
-            padding: 6px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        /* 하단 텍스트 */
-        p {
-            text-align: right;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        #Seal {
-            position: relative; /* 부모 요소 */
-            z-index: 0; /* 텍스트를 이미지 뒤쪽에 배치 */
-        }
-
-        #Seall {
-            position: absolute; /* 이미지를 특정 위치로 겹침 */
-            top: -100%; /* 텍스트 위쪽에 겹치도록 설정 */
-            left: 59%; /* 텍스트 왼쪽에 맞춤 */            
-            z-index: 1; /* 텍스트보다 위에 배치 */
-        }
-
-    </style>
+    <title>요금수납확인서</title>
+<link rel="stylesheet" href="/resources/CSS/detail/payment.css" />
 </head>
 <body>
     <div width=>
@@ -123,7 +63,7 @@
         </table>
         <table>
             <tr>
-                <td>위와 같이 납부하였음을 증명합니다.<br><span>출력날짜</span><br><div style="position: relative;"><span id="Seal">한국지역난방공사</span> <img id="Seall" src="도장이미지.png" alt="도장" width="50" height="50"></div>
+                <td>위와 같이 납부하였음을 증명합니다.<br><span>출력날짜</span><br><div style="position: relative;"><span id="Seal">한국지역난방공사</span> <img id="Seall"alt="도장" src="/resources/img/detail/Seal.png" width="50" height="50"></div>
                 </td>
             </tr>
         </table>

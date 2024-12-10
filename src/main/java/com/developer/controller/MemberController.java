@@ -34,12 +34,16 @@ public class MemberController {
 	}
 	
 	@ResponseBody
-	@PostMapping("/join/idOverlap")
-	public int idOverlap(MemberDTO memberDTO) throws Exception{
-		
-		int result = memberService.idOverlap(memberDTO);
-		
-		return result;
+	@GetMapping("/join/idOverlap")
+	public Integer idOverlap(MemberDTO memberDTO) throws Exception{
+		try {
+			int result = memberService.idOverlap(memberDTO);
+	        return result;
+	    } 
+		catch (Exception e) {
+	        e.printStackTrace();
+	        return -1;  // 에러 발생 시 -1 반환
+	    }
 	}
 	
 	@PostMapping("/join/register")

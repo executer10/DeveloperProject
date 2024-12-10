@@ -11,11 +11,9 @@ public class BillingDAOImpl implements BillingDAO {
 	SqlSession session;
 	
 	String namespace = "com.developer.dao.BillingDAO.";
-	
-	@Override
-	public int charge(BillingDTO billingDTO) throws Exception {
-		
-		return session.selectOne(namespace + "charge", billingDTO);
-	}
 
+	@Override
+    public BillingDTO charge(BillingDTO billingDTO) throws Exception {
+        return session.selectOne(namespace + "charge", billingDTO);
+    }
 }

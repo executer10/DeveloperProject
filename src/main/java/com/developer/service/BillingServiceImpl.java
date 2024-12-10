@@ -11,9 +11,10 @@ public class BillingServiceImpl implements BillingService{
 
 	@Autowired
 	BillingDAO billingDAO;
-	
+
 	@Override
-	public int charge(BillingDTO dto) throws Exception {
-		return billingDAO.charge(dto);
+	public BillingDTO charge(BillingDTO billingDTO) throws Exception {
+		// 요금 정보 조회
+		return billingDAO.charge(billingDTO);
 	}
 }

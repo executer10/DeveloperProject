@@ -34,7 +34,7 @@ public class MemberController {
 	}
 	
 	@ResponseBody
-	@GetMapping("/join/idOverlap")
+	@PostMapping("/join/idOverlap")
 	public Integer idOverlap(MemberDTO memberDTO) throws Exception{
 		try {
 			int result = memberService.idOverlap(memberDTO);

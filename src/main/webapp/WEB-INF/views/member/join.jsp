@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/resources/CSS/member/header.css">
     <link rel="stylesheet" href="/resources/CSS/member/join.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 
 <body>
@@ -57,6 +58,7 @@
             <tr>
                 <td>
                     <input type="text" name="address" id="address" placeholder="주소">
+               		<button type="button" onclick="searchAddress()">주소 검색</button>
                     <p id="addressMsg"></p>
                 </td>
             </tr>
@@ -73,7 +75,7 @@
     function fn_idOverlap() {
         $.ajax({
             url: "/join/idOverlap",    // URL 수정
-            type: "get",
+            type: "post",
             dataType: "json",
             data: {"user_id": $("#user_id").val()},  // 파라미터 이름 수정
             success: function(data) {
@@ -93,6 +95,26 @@
                 console.log("Error: " + error);
             }
         });
+    }
+    
+    function searchAddress() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                var addr = ''; // 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져옴
+                if (data.userSelectedType === 'R') { // 도로명 주소
+                    addr = data.roadAddress;
+                } else { // 지번 주소
+                    addr = data.jibunAddress;
+                }
+
+                // 주소 정보를 해당 필드에 넣는다
+                document.getElementById("address").value = addr;
+                // 상세주소 필드로 커서 이동
+                document.getElementById("detailAddress").focus();
+            }
+        }).open();
     }
     </script>
 </body>

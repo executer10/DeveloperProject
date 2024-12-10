@@ -76,4 +76,16 @@ monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부
           }
       }
   });
+  
+// 프린터 관련 함수
+document.getElementById('button2').onclick = function() {
+    // 다른 페이지를 새 창에서 열기
+    const printWindow = window.open('payment', '_blank', 'width=1000,height=1200');
+    
+    // 새 창에서 로딩 완료 후 프린트 실행
+    printWindow.onload = function() {
+        printWindow.print(); // 프린트 대화상자 띄우기
+    };
+};
+    
 

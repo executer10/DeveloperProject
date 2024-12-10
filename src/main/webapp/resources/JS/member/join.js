@@ -70,3 +70,47 @@ function formCheck() {
 
     return isValid;
 }
+
+
+function fn_idOverlap() {
+        $.ajax({
+            url: "/join/idOverlap",    // URL 수정
+            type: "post",
+            dataType: "json",
+            data: {"user_id": $("#user_id").val()},  // 파라미터 이름 수정
+            success: function(data) {
+            	console.log(data)
+                if($("#user_id").val() == null || $("#user_id").val() == "") {
+                    alert("아이디를 입력하세요.");
+                } else if(data == 0) {
+                    $("#idOverlap").attr("value", "Y");
+                    alert("사용 가능한 아이디입니다.");
+                } else if(data == 1) {
+                    $("#idOverlap").attr("value", "N");
+                    alert("중복된 아이디입니다.");
+                }
+            },
+            error: function(xhr, status, error) {    // 에러 처리 추가
+                alert("서버 오류가 발생했습니다. 관리자에게 문의하세요.");
+                console.log("Error: " + error);
+			}
+		});
+}
+    
+function searchAddress() {
+	new daum.Postcode({
+        autoClose: true,  // 주소 선택 후 자동으로 창이 닫힙니다
+        oncomplete: function(data) {
+            var addr = '';
+
+            if (data.userSelectedType === 'R') {
+                addr = data.roadAddress;
+            } else {
+                addr = data.jibunAddress;
+            }
+
+            document.getElementById("address").value = addr;
+            document.getElementById("address").focus();
+        }
+    }).open();
+}

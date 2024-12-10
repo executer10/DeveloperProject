@@ -71,51 +71,5 @@
     </form>
 
     <script src="/resources/JS/member/join.js"></script>
-    <script>
-    function fn_idOverlap() {
-        $.ajax({
-            url: "/join/idOverlap",    // URL 수정
-            type: "post",
-            dataType: "json",
-            data: {"user_id": $("#user_id").val()},  // 파라미터 이름 수정
-            success: function(data) {
-            	console.log(data)
-                if($("#user_id").val() == null || $("#user_id").val() == "") {
-                    alert("아이디를 입력하세요.");
-                } else if(data == 0) {
-                    $("#idOverlap").attr("value", "Y");
-                    alert("사용 가능한 아이디입니다.");
-                } else if(data == 1) {
-                    $("#idOverlap").attr("value", "N");
-                    alert("중복된 아이디입니다.");
-                }
-            },
-            error: function(xhr, status, error) {    // 에러 처리 추가
-                alert("서버 오류가 발생했습니다. 관리자에게 문의하세요.");
-                console.log("Error: " + error);
-            }
-        });
-    }
-    
-    function searchAddress() {
-        new daum.Postcode({
-            oncomplete: function(data) {
-                var addr = ''; // 주소 변수
-
-                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져옴
-                if (data.userSelectedType === 'R') { // 도로명 주소
-                    addr = data.roadAddress;
-                } else { // 지번 주소
-                    addr = data.jibunAddress;
-                }
-
-                // 주소 정보를 해당 필드에 넣는다
-                document.getElementById("address").value = addr;
-                // 상세주소 필드로 커서 이동
-                document.getElementById("detailAddress").focus();
-            }
-        }).open();
-    }
-    </script>
 </body>
 </html>

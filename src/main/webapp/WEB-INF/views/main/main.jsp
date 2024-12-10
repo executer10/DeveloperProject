@@ -5,10 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+<link rel="stylesheet" href="/resources/CSS/member/header.css">
 <link rel="stylesheet" href="/resources/CSS/main/main.css" />
 </head>
 <body>
+<%@include file="/WEB-INF/views/member/header.jsp" %>
    <h1>간편요금조회</h1>
         
         <div class="billing-box">    
@@ -29,7 +31,7 @@
                             
                         </select>
                     
-                        <button>조회</button>
+                        <button id="button1">조회</button>
                         
                     </div>
                     
@@ -73,97 +75,28 @@
         <h2>납부내역출력</h2>
         
         <div class="printer-box">
+            <div class="name">   
+                <h4>이름</h4>
+                <input type="text" id="name">
+            </div> 
+            <div class="contact-number2">    
+                <h4>사용계약번호</h4>
+                <input type="text" id="number">
+            </div>
+            
             <label for="year-select"> </label>
             <select id="year-select">
             <!-- JavaScript로 옵션 생성 -->
             </select>
             
             <div class="button">
-                <button type="button">인쇄</button>
-                <button type="button">엑셀저장</button>
+                <button type="button" id="button2">인쇄</button>
+                <button type="button" id="button2">엑셀저장</button>
             </div>    
         </div>
         
-        
-         <script>
-      
-      // 월 옵션 추가 (1월~12월)
-      const monthSelect = document.getElementById('month-select');
-      for (let month = 1; month <= 12; month++) {
-      const option = document.createElement('option');
-      option.value = month; // 선택 값
-      option.textContent = `${month}월`; // 표시 텍스트 (월 추가)
-      monthSelect.appendChild(option);
-    }
-
-    // 기본값 설정 (선택 사항)
-
-    monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부터 시작하므로 +1)
-        </script>
-        
-        <script>
-            // 현재 연도 계산
-            const currentYear = new Date().getFullYear();
-            const startYear = 2000; // 시작 연도
-            const yearSelect = document.getElementById('year-select');
-            const yearSelectt = document.getElementById('year2');
-            // 년도 옵션 추가
-            for (let year = startYear; year <= currentYear; year++) {
-              const option = document.createElement('option');
-              option.value = year; // 선택 값             
-              option.textContent = `${year}년`; // 표시 텍스트 (년 추가)
-
-              yearSelect.appendChild(option);
-            }
-            for (let year = startYear; year <= currentYear; year++) {
-              const option = document.createElement('option');
-              option.value = year; // 선택 값             
-              option.textContent = `${year}년`; // 표시 텍스트 (년 추가)
-
-              yearSelectt.appendChild(option);
-            }
-    
-        
-            // 기본값 설정 (선택 사항)
-            yearSelect.value = currentYear; // 현재 연도 기본 선택
-            yearSelectt.value = currentYear; // 현재 연도 기본 선택
-          </script>
-    
-    
-    <script>
-        var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-        var myDoughnutChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['공급가액', '연체료', '부가세'],
-                datasets: [{
-                    data: [300000, 50000, 30000],
-                    backgroundColor: ['#4BC0C0', '#36A2EB', '#FFCE56'],
-                    hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                var label = context.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                label += context.raw + '원';
-                                return label;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+<script type="text/javascript" src="/resources/JS/main/main.js"></script>
     
 </body>
 </html>

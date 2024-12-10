@@ -71,7 +71,7 @@
     </div>
 
         
-        <a href="#">한국지역난방공사 요금표</a>
+        <a href="javascript:void(0);" onclick="window.open('details', '_blank', 'width=800,height=600');">한국지역난방공사 요금표</a>
         <h2>납부내역출력</h2>
         
         <div class="printer-box">
@@ -90,8 +90,8 @@
             </select>
             
             <div class="button">
-                <button type="button" id="button2">인쇄</button>
-                <button type="button" id="button2">엑셀저장</button>
+                <button type="button" id="button2" >인쇄</button>
+                <button type="button" id="button3">엑셀저장</button>
             </div>    
         </div>
         

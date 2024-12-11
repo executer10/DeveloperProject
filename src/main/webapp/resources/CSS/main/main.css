@@ -9,7 +9,7 @@
     width: 1200px;
     height: 200px;
     border: 1px solid rgb(214, 214, 214);
-    margin-left: 340px;
+    margin-left: 360px;
     border-radius: 4px;
 }
 .billing-search{
@@ -27,7 +27,7 @@
 }
 h1{
     font-size: 30px;
-    padding-left: 340px;
+    padding-left: 360px;
     padding-top: 80px;
     padding-bottom: 30px;
     
@@ -74,7 +74,7 @@ p{
 
 h2{
     font-size: 30px;
-    padding-left: 340px;
+    padding-left: 360px;
     padding-top: 50px;
 }
 table{
@@ -91,7 +91,7 @@ table{
     width: 1200px;
     height: 360px;
     border: 1px solid rgb(214, 214, 214);
-    margin-left: 340px;
+    margin-left: 360px;
     margin-top: 30px;
     border-radius: 4px;
     display: flex; 
@@ -103,24 +103,32 @@ td:first-child{
     text-align: left;
     padding-left: 10px;
     font-weight: bold;
-    width: 260px;
+    width: 200px;
     background-color: rgb(236, 236, 236);
     padding-left: 30px;
 }
 td:nth-child(2){
     text-align: right;
     padding-right: 44px;
-    width: 400px;
+    width: 340px;
 }
 .chart-container {
     width: 20%;
     padding-top: 60px;
-    margin-left: 100px;
+    margin-left: 80px;
 }
-a{
+.p1{
+    font-size: 30px;
+    color: black;
+    margin-top: 240px;
+    margin-left: 40px;
+    
+
+}
+.billing-table{
     color: rgb(226, 36, 36);
     position: absolute;
-    right: 360px;
+    right: 340px;
     top: 1050px;
 
 }
@@ -128,7 +136,7 @@ a{
     width: 1200px;
     height: 160px;
     border: 1px solid rgb(214, 214, 214);
-    margin-left: 340px;
+    margin-left: 360px;
     margin-top: 40px;
     border-radius: 4px;
     display: flex;
@@ -166,12 +174,24 @@ h4{
     height: 58px;
     font-size: 16px;
     background-color: rgb(35, 126, 211);
-    color: aliceblue;
+    color: rgb(247, 247, 247);
     font-weight: normal;
     border: none;
-    margin-bottom: -40px;
+    margin-top: 26px;
 }
-
 #button2:hover{
+    background-color: grey;
+}
+#button3{
+    width: 90px;
+    height: 58px;
+    font-size: 16px;
+    background-color: rgb(35, 126, 211);
+    color: rgb(247, 247, 247);
+    font-weight: normal;
+    border: none;
+    margin-top: 26px;
+}
+#button3:hover{
     background-color: grey;
 }

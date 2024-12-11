@@ -76,31 +76,4 @@ monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부
           }
       }
   });
-  
-// 프린터 관련 함수
-document.getElementById('button2').onclick = function() {
-    // 모니터 크기 가져오기
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
-
-    // 새 창 크기 설정
-    const windowWidth = 1000; // 새 창의 너비
-    const windowHeight = 900; // 새 창의 높이
-
-    // 중앙 좌표 계산
-    const left = (screenWidth - windowWidth) / 2;
-    const top = (screenHeight - windowHeight) / 2;
-
-    // 페이지를 중앙에 열기
-    const printWindow = window.open(
-        'payment',
-        '_blank',
-        `width=${windowWidth},height=${windowHeight},left=${left},top=${top}`
-    );
-
-    // 새 창이 로드되면 프린트 실행
-    printWindow.onload = function() {
-        printWindow.print(); // 프린트 대화상자 열기        
-    };
-}; 
 

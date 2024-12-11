@@ -1,10 +1,8 @@
 package com.developer.dto;
 
-import java.time.LocalDateTime;
-
 public class BillingDTO {
 	private String contract_number;
-	private LocalDateTime billing_date;
+	private String billing_date;
 	private int usage_data;
 	private int usage_fee;
 	private int overdue_fee;
@@ -22,12 +20,12 @@ public class BillingDTO {
 	}
 
 
-	public LocalDateTime getBilling_date() {
+	public String getBilling_date() {
 		return billing_date;
 	}
 
 
-	public void setBilling_date(LocalDateTime billing_date) {
+	public void setBilling_date(String billing_date) {
 		this.billing_date = billing_date;
 	}
 

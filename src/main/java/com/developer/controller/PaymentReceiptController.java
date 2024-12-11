@@ -17,11 +17,6 @@ public class PaymentReceiptController {
 	@Autowired
 	PaymentReceiptService paymentReceiptService;
 	
-	@GetMapping("/payment")
-	public String payment() {
-		return "/detail/PaymentReceipt";
-	}
-	
 	@GetMapping("/details")
 	public String details() {
 		return "/detail/view_details";
@@ -29,14 +24,18 @@ public class PaymentReceiptController {
 	
 	@PostMapping("/payment")
 	public String chargeList(PaymentReceiptDTO paymentReceiptDTO, Model model) throws Exception{
-		
-		List<PaymentReceiptDTO> retult = paymentReceiptService.chargeList(paymentReceiptDTO);
-		
+		List<PaymentReceiptDTO> result = paymentReceiptService.chargeList(paymentReceiptDTO);
+	    
+		if(result == null || result.isEmpty()) {
+			model.addAttribute("msg", "요금 정보를 찾을 수 없습니다.");
+	       	model.addAttribute("url", "/main");
+	       	return "/member/alertPrint";
+		}
 		
 		System.out.println(paymentReceiptDTO.getCustomer_name());
 		System.out.println(paymentReceiptDTO.getContract_number());
 		System.out.println(paymentReceiptDTO.getYear());
-		model.addAttribute("PRDTO", retult);
+		model.addAttribute("PRDTO", result);
 		return "/detail/PaymentReceipt";
 	}
 }

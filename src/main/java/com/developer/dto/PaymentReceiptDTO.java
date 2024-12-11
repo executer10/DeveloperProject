@@ -1,7 +1,5 @@
 package com.developer.dto;
 
-import java.time.LocalDateTime;
-
 public class PaymentReceiptDTO {
 	// 요청 필드
     private String customer_name;
@@ -10,7 +8,7 @@ public class PaymentReceiptDTO {
     
     // 응답 필드 
     private String customer_phone;
-    private LocalDateTime billing_date;
+    private String billing_date;
     private int billed_amount;
     private int paid_amount;
     
@@ -38,10 +36,10 @@ public class PaymentReceiptDTO {
 	public void setCustomer_phone(String customer_phone) {
 		this.customer_phone = customer_phone;
 	}
-	public LocalDateTime getBilling_date() {
+	public String getBilling_date() {
 		return billing_date;
 	}
-	public void setBilling_date(LocalDateTime billing_date) {
+	public void setBilling_date(String billing_date) {
 		this.billing_date = billing_date;
 	}
 	public int getBilled_amount() {

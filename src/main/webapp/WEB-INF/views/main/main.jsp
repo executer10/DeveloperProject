@@ -13,8 +13,7 @@
 <%@include file="/WEB-INF/views/member/header.jsp" %>
    <h1>간편요금조회</h1>
         
-        <div class="billing-box">    
-        	<form class="billing-day" action="/charge" method="post">
+        <form class="billing-box" action="/charge" method="post">    
                 <div class="billing-search">
                     <div class="contact-number">
                         <h3>사용계약번호</h3>
@@ -22,7 +21,7 @@
                     </div>
                     
                     
-                    
+                    <div class="billing-day">
                         <h3>청구년월</h3>
                         <select name="year" id="year2">
 
@@ -33,12 +32,14 @@
                         </select>
                     
                         <button id="button1">조회</button>
-
+                        
+                    </div>
+                    
                 </div>
-            </form>
+            
 
             <p>※<span>사용계약번호</span>를 입력해 주세요.<span>사용계약번호</span>는 청구서에 기재되어 있습니다.</p>
-        </div>
+        </form>
 
     
     <h2>가스요금내역</h2>
@@ -46,6 +47,10 @@
     <div class="table-box">    
         <div class="table">
             <table>
+                <tr>
+                    <td>사용량</td>
+                    <td>${billingData.usage_data}N㎥</td>
+                </tr>
                 <tr>
                     <td>공급가액</td>
                     <td>${billingData.usage_fee}원</td>
@@ -66,11 +71,12 @@
         </div>
         <div class="chart-container">
             <canvas id="myDoughnutChart"></canvas>
-        </div>        
+        </div>
+        <p class="p1">월</p>         
     </div>
 
         
-        <a href="javascript:void(0);" onclick="window.open('details', '_blank', 'width=800,height=600');">한국지역난방공사 요금표</a>
+        <a href="#" class="billing-table">한국지역난방공사 요금표</a>
         <h2>납부내역출력</h2>
         
         <div class="printer-box">
@@ -89,7 +95,7 @@
             </select>
             
             <div class="button">
-                <button type="button" id="button2" >인쇄</button>
+                <button type="button" id="button2">인쇄</button>
                 <button type="button" id="button3">엑셀저장</button>
             </div>    
         </div>

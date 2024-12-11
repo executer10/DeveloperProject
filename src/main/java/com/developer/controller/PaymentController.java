@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PaymentController {
 	@GetMapping("/payment")
 	public String payment() {
-		return "/detail/payment";
+		return "/detail/PaymentReceipt";
 	}
 	
 	@GetMapping("/details")

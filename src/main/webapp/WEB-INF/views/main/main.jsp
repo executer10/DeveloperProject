@@ -14,7 +14,7 @@
    <h1>간편요금조회</h1>
         
         <div class="billing-box">    
-        	<form class="billing-day" action="/charge" method="get">
+        	<form class="billing-day" action="/charge" method="post">
                 <div class="billing-search">
                     <div class="contact-number">
                         <h3>사용계약번호</h3>

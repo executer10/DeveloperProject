@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.developer.dto.BillingDTO;
 import com.developer.service.BillingService;
@@ -20,7 +20,7 @@ public class MainController {
 		return "/main/main";
 	}
 	
-	@GetMapping("/charge")
+	@PostMapping("/charge")
 	public String charge(BillingDTO billingDTO, Model model) throws Exception {
 
 		BillingDTO result = billingService.charge(billingDTO);

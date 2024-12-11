@@ -62,7 +62,11 @@ select{
 #button1:hover{
     background-color: grey;
 }
-span{
+.contact1{
+    color: rgb(226, 36, 36);
+    text-decoration: underline;
+}
+.contact2{
     color: rgb(226, 36, 36);
     text-decoration: underline;
 }

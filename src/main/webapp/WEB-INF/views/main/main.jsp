@@ -38,7 +38,7 @@
                 </div>
             
 
-            <p>※<span>사용계약번호</span>를 입력해 주세요.<span>사용계약번호</span>는 청구서에 기재되어 있습니다.</p>
+            <p>※<span class="contact1">사용계약번호</span>를 입력해 주세요.<span class="contact2">사용계약번호</span>는 청구서에 기재되어 있습니다.</p>
         </form>
 
     
@@ -53,15 +53,15 @@
                 </tr>
                 <tr>
                     <td>공급가액</td>
-                    <td>${billingData.usage_fee}원</td>
+                    <td><span id="supprice">${billingData.usage_fee}</span><label>원</label></td>
                 </tr>
                 <tr>
                     <td>부가세</td>
-                    <td>${billingData.vat_fee}원</td>
+                    <td><span id="surtax">${billingData.vat_fee}</span><label>원</label></td>
                 </tr>
                 <tr>
                     <td>연체료</td>
-                    <td>${billingData.overdue_fee}원</td>
+                    <td><span id="latefees">${billingData.overdue_fee}</span><label>원</label></td>
                 </tr>
                 <tr>
                     <td>결제금액</td>

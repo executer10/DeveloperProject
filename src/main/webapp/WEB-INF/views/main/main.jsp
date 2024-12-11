@@ -72,7 +72,7 @@
         <div class="chart-container">
             <canvas id="myDoughnutChart"></canvas>
         </div>
-        <p class="p1">월</p>         
+        <p class="p1">${billingDTO.getMonth()}월</p>         
     </div>
 
         

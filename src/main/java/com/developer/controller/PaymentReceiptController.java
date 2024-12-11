@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class PaymentController {
+public class PaymentReceiptController {
 	@GetMapping("/payment")
 	public String payment() {
 		return "/detail/PaymentReceipt";

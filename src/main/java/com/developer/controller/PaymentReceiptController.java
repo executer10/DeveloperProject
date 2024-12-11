@@ -16,7 +16,7 @@ import com.developer.service.PaymentReceiptService;
 public class PaymentReceiptController {
 	@Autowired
 	PaymentReceiptService paymentReceiptService;
-	
+
 	@GetMapping("/details")
 	public String details() {
 		return "/detail/view_details";

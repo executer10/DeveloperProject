@@ -10,7 +10,7 @@
             </c:when>
             <c:otherwise>
                 <button type="button" onclick="location.href='/logout'">로그아웃 하기</button>
-                <!-- <button type="button" onclick="location.href='/mypage/download-history'">PDFDownloadLog</button> -->
+                <!-- <button type="button" onclick="location.href='/PDFDownloadLog'">PDFDownloadLog</button> -->
             </c:otherwise>
         </c:choose>
     </div>

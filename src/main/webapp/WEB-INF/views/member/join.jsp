@@ -9,6 +9,8 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="/resources/CSS/member/header.css">
     <link rel="stylesheet" href="/resources/CSS/member/join.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
             <tr>
                 <td>
                     <input type="text" name="user_id" id="user_id" placeholder="아이디">
-                    <button type="button" style="height: 45px;">중복 체크</button>
+                    <button type="button" id="idOverlap" class="idOverlap" value="N" onclick="fn_idOverlap()">중복확인</button>
                     <p id="idMsg"></p>
                 </td>
             </tr>
@@ -56,6 +58,7 @@
             <tr>
                 <td>
                     <input type="text" name="address" id="address" placeholder="주소">
+               		<button type="button" onclick="searchAddress()">주소 검색</button>
                     <p id="addressMsg"></p>
                 </td>
             </tr>

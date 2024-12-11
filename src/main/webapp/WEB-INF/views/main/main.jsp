@@ -14,14 +14,15 @@
    <h1>간편요금조회</h1>
         
         <div class="billing-box">    
+        	<form class="billing-day" action="/charge" method="post">
                 <div class="billing-search">
                     <div class="contact-number">
                         <h3>사용계약번호</h3>
-                        <input></input>
+                        <input type="text" name="contract_number">
                     </div>
                     
                     
-                    <div class="billing-day">
+                    
                         <h3>청구년월</h3>
                         <select name="year" id="year2">
 
@@ -32,11 +33,9 @@
                         </select>
                     
                         <button id="button1">조회</button>
-                        
-                    </div>
-                    
+
                 </div>
-            
+            </form>
 
             <p>※<span>사용계약번호</span>를 입력해 주세요.<span>사용계약번호</span>는 청구서에 기재되어 있습니다.</p>
         </div>
@@ -49,19 +48,19 @@
             <table>
                 <tr>
                     <td>공급가액</td>
-                    <td>-원</td>
+                    <td>${billingData.usage_fee}원</td>
                 </tr>
                 <tr>
                     <td>부가세</td>
-                    <td>-원</td>
+                    <td>${billingData.vat_fee}원</td>
                 </tr>
                 <tr>
                     <td>연체료</td>
-                    <td>-원</td>
+                    <td>${billingData.overdue_fee}원</td>
                 </tr>
                 <tr>
                     <td>결제금액</td>
-                    <td>-원</td>
+                    <td>${billingData.total_amount}원</td>
                 </tr>
             </table>
         </div>
@@ -71,7 +70,7 @@
     </div>
 
         
-        <a href="#">한국지역난방공사 요금표</a>
+        <a href="javascript:void(0);" onclick="window.open('details', '_blank', 'width=800,height=600');">한국지역난방공사 요금표</a>
         <h2>납부내역출력</h2>
         
         <div class="printer-box">
@@ -90,8 +89,8 @@
             </select>
             
             <div class="button">
-                <button type="button" id="button2">인쇄</button>
-                <button type="button" id="button2">엑셀저장</button>
+                <button type="button" id="button2" >인쇄</button>
+                <button type="button" id="button3">엑셀저장</button>
             </div>    
         </div>
         

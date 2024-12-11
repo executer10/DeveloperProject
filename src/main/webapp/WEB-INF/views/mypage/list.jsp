@@ -6,7 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>증명서 처리 현황</title>
-    <link rel="stylesheet" type="text/css" href="resources/CSS/mypage/mypage.css">    
+    <link rel="stylesheet" href="/resources/CSS/member/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/CSS/mypage/mypage.css">    
 </head>
 <body>
     <%@ include file="../member/header.jsp" %>

@@ -20,7 +20,6 @@
                         <input type="text" name="contract_number">
                     </div>
                     
-                    
                     <div class="billing-day">
                         <h3>청구년월</h3>
                         <select name="year" id="year2">
@@ -79,26 +78,26 @@
         <a href="#" class="billing-table">한국지역난방공사 요금표</a>
         <h2>납부내역출력</h2>
         
-        <div class="printer-box">
+        <form class="printer-box" action="/payment" method="post">
             <div class="name">   
                 <h4>이름</h4>
-                <input type="text" id="name">
+                <input type="text" name="customer_name" id="name">
             </div> 
             <div class="contact-number2">    
                 <h4>사용계약번호</h4>
-                <input type="text" id="number">
+                <input type="text" name="contract_number" id="number">
             </div>
             
             <label for="year-select"> </label>
-            <select id="year-select">
+            <select id="year-select" name="year">
             <!-- JavaScript로 옵션 생성 -->
             </select>
             
             <div class="button">
-                <button type="button" id="button2">인쇄</button>
+                <button type="submit" id="button2">인쇄</button>
                 <button type="button" id="button3">엑셀저장</button>
-            </div>    
-        </div>
+            </div>   
+        </form>
         
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
 <script type="text/javascript" src="/resources/JS/main/main.js"></script>

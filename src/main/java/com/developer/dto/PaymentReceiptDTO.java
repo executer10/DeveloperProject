@@ -1,92 +1,67 @@
 package com.developer.dto;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class PaymentReceiptDTO {
-    private long contractNumber;
-    private String customerPhone;
-    private String customerName;
-    private String address;
-    private Date billingDate;
-    private int billedAmount;
-    private int paidAmount;
-
-    // 기본 생성자
-    public PaymentReceiptDTO() {
-    }
-
-    // 매개변수가 있는 생성자
-    public PaymentReceiptDTO(long contractNumber, String customerPhone, String customerName, String address,
-                              Date billingDate, int billedAmount, int paidAmount) {
-        this.contractNumber = contractNumber;
-        this.customerPhone = customerPhone;
-        this.customerName = customerName;
-        this.address = address;
-        this.billingDate = billingDate;
-        this.billedAmount = billedAmount;
-        this.paidAmount = paidAmount;
-    }
-
-    public long getContractNumber() {
-        return contractNumber;
-    }
-
-    public void setContractNumber(long contractNumber) {
-        this.contractNumber = contractNumber;
-    }
-
-    public String getCustomerPhone() {
-        return customerPhone;
-    }
-
-    public void setCustomerPhone(String customerPhone) {
-        this.customerPhone = customerPhone;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Date getBillingDate() {
-        return billingDate;
-    }
-
-    public void setBillingDate(Date billingDate) {
-        this.billingDate = billingDate;
-    }
-
-    public int getBilledAmount() {
-        return billedAmount;
-    }
-
-    public void setBilledAmount(int billedAmount) {
-        this.billedAmount = billedAmount;
-    }
-
-    public int getPaidAmount() {
-        return paidAmount;
-    }
-
-    public void setPaidAmount(int paidAmount) {
-        this.paidAmount = paidAmount;
-    }
-
-    @Override
-    public String toString() {
-        return "PaymentReceipt [contractNumber=" + contractNumber + ", customerPhone=" + customerPhone
-                + ", customerName=" + customerName + ", address=" + address + ", billingDate=" + billingDate
-                + ", billedAmount=" + billedAmount + ", paidAmount=" + paidAmount + "]";
-    }
+	// 요청 필드
+    private String customer_name;
+    private long contract_number;
+    private int year;
+    
+    // 응답 필드 
+    private String customer_phone;
+    private LocalDateTime billing_date;
+    private int billed_amount;
+    private int paid_amount;
+    
+	public String getCustomer_name() {
+		return customer_name;
+	}
+	public void setCustomer_name(String customer_name) {
+		this.customer_name = customer_name;
+	}
+	public long getContract_number() {
+		return contract_number;
+	}
+	public void setContract_number(long contract_number) {
+		this.contract_number = contract_number;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public String getCustomer_phone() {
+		return customer_phone;
+	}
+	public void setCustomer_phone(String customer_phone) {
+		this.customer_phone = customer_phone;
+	}
+	public LocalDateTime getBilling_date() {
+		return billing_date;
+	}
+	public void setBilling_date(LocalDateTime billing_date) {
+		this.billing_date = billing_date;
+	}
+	public int getBilled_amount() {
+		return billed_amount;
+	}
+	public void setBilled_amount(int billed_amount) {
+		this.billed_amount = billed_amount;
+	}
+	public int getPaid_amount() {
+		return paid_amount;
+	}
+	public void setPaid_amount(int paid_amount) {
+		this.paid_amount = paid_amount;
+	}
+	@Override
+	public String toString() {
+		return "PaymentReceiptDTO [customer_name=" + customer_name + ", contract_number=" + contract_number + ", year="
+				+ year + ", customer_phone=" + customer_phone + ", billing_date=" + billing_date + ", billed_amount="
+				+ billed_amount + ", paid_amount=" + paid_amount + "]";
+	}
+    
+	
 }

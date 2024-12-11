@@ -12,9 +12,7 @@ monthSelect.appendChild(option);
 // 기본값 설정 (선택 사항)
 
 monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부터 시작하므로 +1)
- 
-  
-  
+
       // 현재 연도 계산
       const currentYear = new Date().getFullYear();
       const startYear = 2000; // 시작 연도
@@ -40,9 +38,6 @@ monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부
       // 기본값 설정 (선택 사항)
       yearSelect.value = currentYear; // 현재 연도 기본 선택
       yearSelectt.value = currentYear; // 현재 연도 기본 선택
-   
-
-
 
   var ctx = document.getElementById('myDoughnutChart').getContext('2d');
   var myDoughnutChart = new Chart(ctx, {
@@ -76,4 +71,31 @@ monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부
           }
       }
   });
+  
+        document.getElementById('button2').onclick = function() {
+            // 모니터 크기 가져오기
+            const screenWidth = window.screen.width;
+            const screenHeight = window.screen.height;
+
+            // 새 창 크기 설정
+            const windowWidth = 1000; // 새 창의 너비
+            const windowHeight = 900; // 새 창의 높이
+
+            // 중앙 좌표 계산
+            const left = (screenWidth - windowWidth) / 2;
+            const top = (screenHeight - windowHeight) / 2;
+
+            // 페이지를 중앙에 열기
+            const printWindow = window.open(
+                'payment.html',
+                '_blank',
+                `width=${windowWidth},height=${windowHeight},left=${left},top=${top}`
+            );
+
+            // 새 창이 로드되면 프린트 실행
+            printWindow.onload = function() {
+                printWindow.print(); // 프린트 대화상자 열기
+                
+            };
+        };
 

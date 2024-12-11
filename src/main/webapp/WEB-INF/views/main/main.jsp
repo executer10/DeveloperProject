@@ -20,7 +20,6 @@
                         <input type="text" name="contract_number">
                     </div>
                     
-                    
                     <div class="billing-day">
                         <h3>청구년월</h3>
                         <select name="year" id="year2">

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/resources/CSS/detail/payment.css" />
 </head>
 <body>
-    <div width=>
+	<div>
         <h2> 요 금 수 납 확 인 서</h2>
         <h3>고 객 일 반 사 항</h3>
         <table>
@@ -59,11 +59,18 @@
             </tr>
         </table>
         <table>
-            <td>납부금액 합계</td><td><b>합금액</b></td>
+        	<tr>
+            	<td>납부금액 합계</td><td><b>합금액</b></td>
+            </tr>
         </table>
         <table>
             <tr>
-                <td>위와 같이 납부하였음을 증명합니다.<br><span>출력날짜</span><br><div style="position: relative;"><span id="Seal">한국지역난방공사</span> <img id="Seall"alt="도장" src="/resources/img/detail/Seal.png" width="50" height="50"></div>
+                <td>위와 같이 납부하였음을 증명합니다.<br>
+	                <span>출력날짜</span><br>
+	                <div style="position: relative;">
+	                	<span id="Seal">한국지역난방공사</span> 
+	                	<img id="Seall"alt="도장" src="/resources/img/detail/Seal.png" width="50" height="50">
+	                </div>
                 </td>
             </tr>
         </table>

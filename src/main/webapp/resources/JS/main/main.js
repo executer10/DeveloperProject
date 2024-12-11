@@ -40,12 +40,24 @@ monthSelect.value = new Date().getMonth() + 1; // 현재 월 기본 선택 (0부
       yearSelectt.value = currentYear; // 현재 연도 기본 선택
 
   var ctx = document.getElementById('myDoughnutChart').getContext('2d');
+  
+  // 공급가액
+  let supprice=document.getElementById("supprice").innerHTML;
+  //연체료
+  let latefees=document.getElementById("latefees").innerHTML;
+  //부가세 
+  let surtax=document.getElementById("surtax").innerHTML;
+  console.log(supprice);
+  console.log(latefees);
+  console.log(surtax);
+  
+  
   var myDoughnutChart = new Chart(ctx, {
       type: 'doughnut',
       data: {
           labels: ['공급가액', '연체료', '부가세'],
           datasets: [{
-              data: [300000, 50000, 30000],
+              data: [supprice, latefees, surtax],
               backgroundColor: ['#4BC0C0', '#36A2EB', '#FFCE56'],
               hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
           }]

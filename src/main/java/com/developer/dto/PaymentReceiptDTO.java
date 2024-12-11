@@ -4,26 +4,27 @@ import java.time.LocalDateTime;
 
 public class PaymentReceiptDTO {
 	// 요청 필드
-    private String customerName;
-    private int contractNumber;
+    private String customer_name;
+    private long contract_number;
     private int year;
     
     // 응답 필드 
-    private String customerPhone;
-    private LocalDateTime billingDate;
-    private int billedAmount;
-    private int paidAmount;
-	public String getCustomerName() {
-		return customerName;
+    private String customer_phone;
+    private LocalDateTime billing_date;
+    private int billed_amount;
+    private int paid_amount;
+    
+	public String getCustomer_name() {
+		return customer_name;
 	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setCustomer_name(String customer_name) {
+		this.customer_name = customer_name;
 	}
-	public int getContractNumber() {
-		return contractNumber;
+	public long getContract_number() {
+		return contract_number;
 	}
-	public void setContractNumber(int contractNumber) {
-		this.contractNumber = contractNumber;
+	public void setContract_number(long contract_number) {
+		this.contract_number = contract_number;
 	}
 	public int getYear() {
 		return year;
@@ -31,34 +32,36 @@ public class PaymentReceiptDTO {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public String getCustomerPhone() {
-		return customerPhone;
+	public String getCustomer_phone() {
+		return customer_phone;
 	}
-	public void setCustomerPhone(String customerPhone) {
-		this.customerPhone = customerPhone;
+	public void setCustomer_phone(String customer_phone) {
+		this.customer_phone = customer_phone;
 	}
-	public LocalDateTime getBillingDate() {
-		return billingDate;
+	public LocalDateTime getBilling_date() {
+		return billing_date;
 	}
-	public void setBillingDate(LocalDateTime billingDate) {
-		this.billingDate = billingDate;
+	public void setBilling_date(LocalDateTime billing_date) {
+		this.billing_date = billing_date;
 	}
-	public int getBilledAmount() {
-		return billedAmount;
+	public int getBilled_amount() {
+		return billed_amount;
 	}
-	public void setBilledAmount(int billedAmount) {
-		this.billedAmount = billedAmount;
+	public void setBilled_amount(int billed_amount) {
+		this.billed_amount = billed_amount;
 	}
-	public int getPaidAmount() {
-		return paidAmount;
+	public int getPaid_amount() {
+		return paid_amount;
 	}
-	public void setPaidAmount(int paidAmount) {
-		this.paidAmount = paidAmount;
+	public void setPaid_amount(int paid_amount) {
+		this.paid_amount = paid_amount;
 	}
 	@Override
 	public String toString() {
-		return "PaymentReceiptDTO [customerName=" + customerName + ", contractNumber=" + contractNumber + ", year="
-				+ year + ", customerPhone=" + customerPhone + ", billingDate=" + billingDate + ", billedAmount="
-				+ billedAmount + ", paidAmount=" + paidAmount + "]";
+		return "PaymentReceiptDTO [customer_name=" + customer_name + ", contract_number=" + contract_number + ", year="
+				+ year + ", customer_phone=" + customer_phone + ", billing_date=" + billing_date + ", billed_amount="
+				+ billed_amount + ", paid_amount=" + paid_amount + "]";
 	}
+    
+	
 }

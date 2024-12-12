@@ -75,7 +75,7 @@
     </div>
 
         
-        <a class="billing-table" href="javascript:void(0);" onclick="window.open('details', '_blank', 'width=800,height=600');">한국지역난방공사 요금표</a>
+        <a class="billing-table" href="javascript:void(0);" onclick="window.open('details', '_blank', 'width=800,height=600');">한국지역난방공사 요금표 </a>
         <h2>납부내역출력</h2>
         
         <form class="printer-box" action="/payment" method="post">

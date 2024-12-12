@@ -12,7 +12,7 @@
 	<!-- 1. DB 연결 설정 -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 	    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-	    <property name="jdbcUrl" value="jdbc:mysql://192.168.30.131:3306:3306/developer_project?serverTimezone=Asia/Seoul"/>
+	    <property name="jdbcUrl" value="jdbc:mysql://192.168.30.131:3306/developer_project?serverTimezone=Asia/Seoul"/>
 	    <property name="username" value="root"/>
 	    <property name="password" value="1234"/>
 	</bean>

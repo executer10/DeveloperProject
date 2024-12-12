@@ -1,7 +1,5 @@
 package com.developer.controller;
 
-import java.net.URLEncoder;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -68,13 +66,13 @@ public class MemberController {
 	}
 	
 	@PostMapping("login/processing")
-	public String login(MemberDTO memberDTO, String toURL, boolean rememberId, HttpServletResponse response, HttpServletRequest request) throws Exception {
+	public String login(MemberDTO memberDTO, String toURL, boolean rememberId, HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
 		
 		// 로그인 정보 검증
 		if (loginCheck(memberDTO) != 1) {
-			// 로그인 실패 시 에러 메시지와 함께 로그인 페이지로 리다이렉트
-			String msg = URLEncoder.encode("아이디 또는 비밀번호가 일치하지 않읍니다.", "utf-8");
-			return "redirect:/login/?msg=" + msg;
+			model.addAttribute("msg", "아이디 혹은 비밀번호가 일치하지 않읍니다.");
+			model.addAttribute("url", "/login");
+			return "/member/alertPrint";
 		}
 		
 		// 세션 생성 및 사용자 ID 저장
